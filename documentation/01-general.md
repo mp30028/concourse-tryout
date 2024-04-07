@@ -15,3 +15,10 @@ Step-4. `mount /mnt/zonesoft-volume-2`
 <br/>
 Step-5. `rmdir /mnt/HC_Volume_100564074/`
 <br/>
+
+
+## checking the status of the docker daemon
+run `service docker status`
+<br/>
+![checking-docker-status](./checking-docker-status.png)
+<br/>
