@@ -22,3 +22,12 @@ run `service docker status`
 <br/>
 ![checking-docker-status](./checking-docker-status.png)
 <br/>
+
+## create the zonesoft-admins group
+run `groupadd zonesoft-admins`
+<br/>
+
+## check group is created
+run `cat /etc/group`
+<br/>
+![check-groups](./check-groups.png)
