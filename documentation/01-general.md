@@ -31,3 +31,19 @@ run `groupadd zonesoft-admins`
 run `cat /etc/group`
 <br/>
 ![check-groups](./check-groups.png)
+
+## granting sudo access to a group (e.g. zonesoft-admins group)
+For low down on sudo access (see this article)[https://ostechnix.com/allow-or-deny-sudo-access-to-a-group-in-linux/]
+<br/>
+Granting sudo access requires editing the sudoers file. However, because this is a critical file and if messed up can render a system unsuable it is not edited directly but using an intermediary tool such as visudo. 
+<br/>
+As further precaution the file is backed up using -a or --archive option. The -a optin copies the file/directory with the same permission settings and metadata as the original. It preserve as much as possible of the structure and attributes of the original files in the copy: same directory tree, same file types, same contents, same metadata (times, permissions, extended attributes, etc.).
+step-1. Backup the sudoers file with `cp --archive /etc/sudoers /etc/sudoers-backup-$(date +"%Y%m%d%H%M%S")`
+<br/>
+step-2. Check backup is there with `ls -ld /etc/sudoers*`<br/>
+![check-backup-of-sudoers](./check-backup-of-sudoers.png)
+</br>
+step-3. Create zonesoft-uids file in the sudoers.d subfolder with `visudo -f /etc/sudoers.d/zonesoft-uids`. This file that will be included into sudoers automatically.
+![sudoers-config](./sudoers-config.png)
+<br/>
+
