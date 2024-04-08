@@ -66,6 +66,14 @@ run `usermod -a -G docker mp30028` to add to the docker group and so the account
 <br/>
 
 
+## shell command to get timestamp 
+run `date +%F-%H%M%S` <br/>
+![shell-timestamp](./shell-timestamp.png) <br/>
+![shell-timestamp-epoch-time-in-seconds](./shell-timestamp-epoch-time-in-seconds.png)
+<br/>
+
+
+
 
 
 
