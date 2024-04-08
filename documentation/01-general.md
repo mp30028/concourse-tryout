@@ -54,6 +54,17 @@ the `-m` option creates a default home directory in `/home/mp30028` <br/>
 the `-s /usr/bin/bash` option sets the default shell for the user to `/bin/bash` <br/>
 the `-c "....."` option adds a comment <br/>
 ![check-user-setup](./check-user-setup.png)
+<br/>
+
+## setting the password for the user
+run `passwd mp30028` and enter password at prompts
+
+## adding users to the gropus
+run `usermod -a -G zonesoft-admins mp30028` to add to the zonesoft-admins group and so can have privileged access <br/>
+run `usermod -a -G docker mp30028` to add to the docker group and so the account can manage docker and docker containers <br/>
+![adding-accounts-to-groups](./adding-accounts-to-groups.png)
+<br/>
+
 
 
 
