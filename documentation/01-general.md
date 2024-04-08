@@ -47,3 +47,14 @@ step-3. Create zonesoft-uids file in the sudoers.d subfolder with `visudo -f /et
 ![sudoers-config](./sudoers-config.png)
 <br/>
 
+
+## creating a user with a default home directory and a default shell
+run `useradd -m -s /usr/bin/bash -c "privileged admin account for mebs" mp30028` <br/>
+the `-m` option creates a default home directory in `/home/mp30028` <br/>
+the `-s /usr/bin/bash` option sets the default shell for the user to `/bin/bash` <br/>
+the `-c "....."` option adds a comment <br/>
+![check-user-setup](./check-user-setup.png)
+
+
+
+
