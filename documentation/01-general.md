@@ -80,5 +80,6 @@ run `sudo chown zsghwfuser:zonesoft-admins /installed-apps`<br/>
 ![change-directory-ownership](./change-directory-ownership.png)
 <br/>
 
-
+## Make the group owner of the directory maintain group ownership of any files created within it
+`chmod g+s /installed-apps`
 
