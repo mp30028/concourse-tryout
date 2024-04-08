@@ -66,7 +66,7 @@ run `usermod -a -G docker mp30028` to add to the docker group and so the account
 <br/>
 
 
-## shell command to get timestamp 
+## shell command to get timestamps 
 run `date +%F-%H%M%S` <br/>
 ![shell-timestamp](./shell-timestamp.png) <br/>
 <br/>
@@ -75,7 +75,10 @@ run `date +%s` to get epoch time value<br/>
 <br/>
 
 
-
+## change ownership of a folder
+run `sudo chown zsghwfuser:zonesoft-admins /installed-apps`<br/>
+![change-directory-ownership](./change-directory-ownership.png)
+<br/>
 
 
 
