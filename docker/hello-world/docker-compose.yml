@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  hello-world:
+    container_name: hello-world
+    image: eclipse-temurin:21.0.1_12-jre
+    command: java -jar /hello-world/hello-world.jar
+    stdin_open: false
+    tty: false
+    environment:
+      ENV_SERVER_PORT: ${SERVER_PORT:-8080}
+    ports:
+      - ${SERVER_PORT:-8080}:${SERVER_PORT:-8080}
+    volumes:
+      - type: bind
+        source: ${APP_JAR_FILEPATH:-../../hello-world/target/hello-world-0.0.1-SNAPSHOT.jar}
+        target: /hello-world/hello-world.jar
+        read_only: true
+    networks:
+      - hellonet
+    restart: ${RESTART:-no}
+
+networks:
+  hellonet:

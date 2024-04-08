@@ -16,11 +16,6 @@ public class HomeController {
 		return "greeting";
 	}
 
-	@GetMapping(value={"/login"})
-	public String login() {		
-		return "login";
-	}	
-
 	@GetMapping(value={"/hello"})
 	public String hello() {		
 		return "hello";
