@@ -83,3 +83,22 @@ run `sudo chown zsghwfuser:zonesoft-admins /installed-apps`<br/>
 ## Make the group owner of the directory maintain group ownership of any files created within it
 `chmod g+s /installed-apps`
 
+## Requesting and setting up SSL on the server
+For instructions [see these notes](https://github.com/mp30028/notes/wiki/ssl)
+<br/>
+
+## For certificate renewals
+run `sudo certbot certonly --standalone --preferred-challenges http -d mp30028.com` <br/>
+However certbot by default setsup a scheduled job to renew the certs but it does not do the conversion to PKCS12 format needed by java applications. Which is why manual intervention is needed<br/>
+
+
+
+#### Paths to private key and certificates
+`/etc/letsencrypt/live/mp30028.com/fullchain.pem` <br/>
+`/etc/letsencrypt/live/mp30028.com/privkey.pem` <br/>
+
+#### convert the .pem files to PKCS12 format that the applications need
+run `sudo openssl pkcs12 -export -out /etc/letsencrypt/live/mp30028.com/cert.p12 -in /etc/letsencrypt/live/mp30028.com/fullchain.pem -inkey /etc/letsencrypt/live/mp30028.com/privkey.pem`<br/>
+When running the above command a prompt will come up to provide an export password which is currently set to *****************<br/>
+
+
