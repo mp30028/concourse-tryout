@@ -1,0 +1,18 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: ubuntu}
+
+inputs:
+  - name: script
+
+run:
+  path: /bin/bash
+  args:
+  - "-e"
+  - "-c"
+  - |
+    chmod ugo+x ./script/run-this.sh
+    ./script/run-this.sh

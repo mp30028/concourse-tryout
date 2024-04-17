@@ -2,16 +2,16 @@ See documentation at [Concourse Documentation](https://concourse-ci.org/docs.htm
 
 Note the the docker-compose.yml file used in this project was adapted from https://github.com/concourse/concourse/blob/master/docker-compose.yml
 
-Other useful resources
-https://github.com/ruanbekker/concourse-swarm-app-demo
-https://dev.to/ruanbekker/using-concourse-ci-to-deploy-to-docker-swarm-5g4b
-https://www.meshcloud.io/en/blog/deploying-concourse-ci-on-openstack-using-docker/
-https://gist.githubusercontent.com/JohannesRudolph/d86ae89b786dc23272172f20ed0a884e/raw/41cc76e0e4d1e2f8a41565fdf824c17a65cfa456/docker-compose.yml
-https://docs.concourse.farm/config/web
-https://concourse-ci.org/fly.html
-https://concourse-ci.org/tutorial-hello-world.html#run-the-pipeline
-https://github.com/concourse/concourse/blob/master/docker-compose.yml
-https://concourse-ci.org/auth.html
+Other useful resources<br/>
+https://github.com/ruanbekker/concourse-swarm-app-demo<br/>
+https://dev.to/ruanbekker/using-concourse-ci-to-deploy-to-docker-swarm-5g4b<br/>
+https://www.meshcloud.io/en/blog/deploying-concourse-ci-on-openstack-using-docker/<br/>
+https://gist.githubusercontent.com/JohannesRudolph/d86ae89b786dc23272172f20ed0a884e/raw/41cc76e0e4d1e2f8a41565fdf824c17a65cfa456/docker-compose.yml<br/>
+https://docs.concourse.farm/config/web<br/>
+https://concourse-ci.org/fly.html<br/>
+https://concourse-ci.org/tutorial-hello-world.html#run-the-pipeline<br/>
+https://github.com/concourse/concourse/blob/master/docker-compose.yml<br/>
+https://concourse-ci.org/auth.html<br/>
 
 
 [Local Instance started up with docker compose defaults](https://localhost:9443/)

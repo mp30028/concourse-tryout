@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  rclone:
+    container_name: rclone
+    image: rclone/rclone:1.66
+    command: mount swotserver:/installed-apps /data/mount
+    stdin_open: false
+    tty: false
+    devices:
+      - /dev/fuse
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - type: bind
+        source: ./mnt/swot-server/installed-apps
+        target: /data/mount
+        read_only: false
+    restart: no
